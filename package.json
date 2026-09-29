@@ -1,0 +1,13 @@
+{
+  "name": "estudeai-landing-page",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing page EstudeAI em HTML, CSS e JavaScript vanilla.",
+  "scripts": {
+    "dev": "node tools/serve.js",
+    "start": "node tools/serve.js",
+    "check": "node --check script.js && node --test tests/*.test.js",
+    "build": "node tools/build.js"
+  },
+  "engines": { "node": ">=18" }
+}

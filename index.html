@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#167b7c">
+  <meta name="description" content="Não estude apenas para saber. Treine para performar. Conheça a EstudeAI: simulados personalizados, pressão progressiva e dados sobre sua performance.">
+  <title>EstudeAI — Seu conhecimento, em outro nível.</title>
+  <link rel="icon" type="image/png" href="assets/logo-estudeai.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <svg class="icon-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-up-right" viewBox="0 0 24 24"><path d="M6 18 18 6M6 6h12v12"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="m13 2-9 12h7l-1 8 10-12h-7l1-8Z"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 4v16h16M8 14l4-5 4 3 5-7"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H5v18h14V8l-5-5Zm0 0v6h5M8 13h8M8 17h5"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5L12 3ZM20 2v4m-2-2h4"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 5v16M3 3c4 0 7 1 9 3 2-2 5-3 9-3v15c-4 0-7 1-9 3-2-2-5-3-9-3V3Z"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="m9 5 11 7-11 7V5Z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6l8-3Z"/><path d="m8 12 3 3 5-6"/></symbol>
+    <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M5 3v6m0 4v8M12 3v11m0 4v3M19 3v2m0 4v12M2 9h6m1 5h6m1-9h6"/></symbol>
+    <symbol id="i-loop" viewBox="0 0 24 24"><path d="M20 10a8 8 0 0 0-14-4L3 9m0-6v6h6M4 14a8 8 0 0 0 14 4l3-3m0 6v-6h-6"/></symbol>
+    <symbol id="i-thought" viewBox="0 0 24 24"><path d="M8 17H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-6l-5 4v-4Z"/><path d="M7 8h10M7 12h6"/></symbol>
+    <symbol id="i-cap" viewBox="0 0 24 24"><path d="m2 9 10-5 10 5-10 5L2 9Zm4 2v6c4 3 8 3 12 0v-6m4-2v8"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 6-6 6 6 6m8-12 6 6-6 6M14 3l-4 18"/></symbol>
+    <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M8 7V3h8v4M3 12c5 4 13 4 18 0m-9 0v4"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></symbol>
+  </svg>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#inicio" aria-label="EstudeAI, início">
+        <span class="brand-emblem"><img src="assets/logo-estudeai.png" alt="" width="2000" height="2000"></span>
+        <span>Estude<span class="brand-ai">AI</span><span class="brand-dot">.</span></span>
+      </a>
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav"><span></span><span></span></button>
+      <nav id="main-nav" class="main-nav" aria-label="Navegação principal">
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#tecnologia">Tecnologia</a>
+        <a href="#para-quem">Para quem</a>
+        <a href="#ciencia">Ciência</a>
+        <span class="nav-divider"></span>
+        <button class="nav-login" data-open="access-dialog">Entrar <svg class="icon"><use href="#i-up-right"/></svg></button>
+        <button class="button button-small" data-open="demo-dialog">Quero testar <svg class="icon"><use href="#i-arrow"/></svg></button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero section" id="inicio" aria-labelledby="hero-title">
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="status-dot"></span> PERFORMANCE ACADÊMICA BASEADA EM DADOS</div>
+          <h1 id="hero-title">Você estudou<br>para a prova.<br><span>Agora treine para<br>performar nela.</span></h1>
+          <p class="hero-description">Seu conhecimento merece aparecer na hora certa. Transforme seus materiais em simulados e treine para quando o relógio começar a correr.</p>
+          <div class="hero-actions">
+            <button class="button" data-open="demo-dialog">Começar treinamento <svg class="icon"><use href="#i-arrow"/></svg></button>
+            <a class="button button-ghost" href="#como-funciona"><span class="play-circle"><svg class="icon"><use href="#i-play"/></svg></span> Ver como funciona</a>
+          </div>
+          <div class="hero-reassurance"><span><svg class="icon"><use href="#i-check"/></svg> No seu ritmo</span><span><svg class="icon"><use href="#i-check"/></svg> Com seus materiais</span><span><svg class="icon"><use href="#i-check"/></svg> Orientado por dados</span></div>
+        </div>
+
+        <div class="hero-product" aria-label="Prévia demonstrativa de um simulado">
+          <div class="product-overline"><span class="mini-line"></span> SEU PRÓXIMO NÍVEL COMEÇA AQUI <span class="product-index">01 / 04</span></div>
+          <div class="training-window">
+            <div class="window-header"><span class="window-brand"><span class="tiny-mark">e<span>↗</span></span> EstudeAI</span><span class="demo-label">PRÉVIA DO PRODUTO</span><span class="avatar">A</span></div>
+            <div class="training-body">
+              <div class="training-heading"><div><span class="overline">SEU TREINO DE HOJE</span><h3>Simulado em andamento<span class="live-dot"></span></h3></div><span class="timer"><svg class="icon"><use href="#i-clock"/></svg> 24:38</span></div>
+              <div class="training-progress"><span>Biologia · ENEM</span><span><strong>08</strong> de 20 questões</span></div>
+              <div class="progress-track"><span style="--progress:40%"></span></div>
+              <div class="sample-question"><div class="question-meta"><span>QUESTÃO 08</span><span>Ecologia</span></div><p>Em uma cadeia alimentar, qual é o papel dos organismos decompositores?</p>
+                <div class="sample-answers" role="group" aria-label="Experimente selecionar uma resposta">
+                  <button class="sample-answer" data-answer="a" aria-pressed="false"><span>A</span> Produzir matéria orgânica a partir da luz.</button>
+                  <button class="sample-answer is-selected" data-answer="b" aria-pressed="true"><span>B</span> Reciclar nutrientes da matéria orgânica.<svg class="icon"><use href="#i-check"/></svg></button>
+                  <button class="sample-answer" data-answer="c" aria-pressed="false"><span>C</span> Consumir exclusivamente produtores.</button>
+                </div>
+              </div>
+              <div class="question-footer"><span class="pressure-tag"><svg class="icon"><use href="#i-bolt"/></svg> Pressão moderada</span><button class="mini-button" data-open="demo-dialog">Experimentar <svg class="icon"><use href="#i-arrow"/></svg></button></div>
+              <div class="preview-metrics"><div><span><svg class="icon"><use href="#i-target"/></svg> Precisão</span><strong>82<span>%</span></strong><small>Conhecimento em ação</small></div><div><span><svg class="icon"><use href="#i-clock"/></svg> Tempo médio</span><strong>1<span>m</span> 42<span>s</span></strong><small>Um ritmo cada vez melhor</small></div><div><span><svg class="icon"><use href="#i-chart"/></svg> Evolução</span><strong class="text-green">+12<span>%</span></strong><small>Entre sessões de exemplo</small></div></div>
+            </div>
+          </div>
+          <div class="floating-insight"><span class="insight-icon"><svg class="icon"><use href="#i-chart"/></svg></span><div><strong>Mais clareza. Mais consistência.</strong><span>Conheça o seu jeito de performar.</span></div><svg class="sparkline" viewBox="0 0 74 32" aria-hidden="true"><path d="m2 27 12-9 11 4 13-13 10 5L71 3"/></svg></div>
+          <p class="mockup-note">Visualização ilustrativa · dados de demonstração</p>
+        </div>
+      </div>
+      <div class="container hero-bottom"><span>CONHECIMENTO É O COMEÇO. PERFORMANCE É O PRÓXIMO PASSO.</span><a href="#problema">Explore uma nova forma de se preparar <span>↓</span></a></div>
+    </section>
+
+    <div class="manifesto-strip" aria-label="Treine, meça, adapte, performe"><div class="container"><span>Treine<span class="strip-dot">.</span></span><svg class="icon"><use href="#i-arrow"/></svg><span>Meça<span class="strip-dot">.</span></span><svg class="icon"><use href="#i-arrow"/></svg><span>Adapte<span class="strip-dot">.</span></span><svg class="icon"><use href="#i-arrow"/></svg><span class="strip-final">Performe<span class="strip-dot">.</span></span></div></div>
+
+    <section class="section problem-section" id="problema">
+      <div class="container">
+        <div class="section-heading reveal"><div class="eyebrow"><span class="section-number">01</span> O PONTO DE PARTIDA</div><h2>Saber a matéria nem sempre<br>significa <span class="text-teal">conseguir demonstrá-la.</span></h2><p>A prova muda as condições. Sua preparação também pode mudar.</p></div>
+        <div class="problem-layout reveal">
+          <div class="comparison-card study-card"><span class="icon-box"><svg class="icon"><use href="#i-book"/></svg></span><h3>Durante os estudos</h3><p>Você conhece o caminho.</p><ul class="check-list"><li><svg class="icon"><use href="#i-check"/></svg> Conhece o conteúdo</li><li><svg class="icon"><use href="#i-check"/></svg> Resolve exercícios</li><li><svg class="icon"><use href="#i-check"/></svg> Tem tempo para pensar</li><li><svg class="icon"><use href="#i-check"/></svg> Está em um ambiente confortável</li></ul></div>
+          <div class="gap-bridge"><span class="bridge-line"></span><span class="bridge-symbol">≠</span><span class="bridge-line"></span><span class="bridge-caption">O contexto<br>faz diferença.</span></div>
+          <div class="comparison-card exam-card"><span class="icon-box coral"><svg class="icon"><use href="#i-bolt"/></svg></span><h3>Durante a prova</h3><p>As condições são outras.</p><ul class="check-list"><li><svg class="icon"><use href="#i-clock"/></svg> Tempo limitado</li><li><svg class="icon"><use href="#i-bolt"/></svg> Pressão por resultado</li><li><svg class="icon"><use href="#i-loop"/></svg> Necessidade de recuperação rápida</li><li><svg class="icon"><use href="#i-thought"/></svg> Hesitação na hora de responder</li></ul></div>
+        </div>
+        <p class="problem-takeaway reveal">Existe uma diferença entre <strong>conhecimento</strong> e <strong>performance.</strong><br><span>A EstudeAI foi criada para ajudar você a reduzir essa distância.</span></p>
+      </div>
+    </section>
+
+    <section class="section how-section" id="como-funciona">
+      <div class="container">
+        <div class="section-heading split-heading reveal"><div><div class="eyebrow"><span class="section-number">02</span> DO SEU MATERIAL AO SEU MELHOR</div><h2>Transforme preparação<br>em <span class="text-teal">treinamento.</span></h2></div><p>Um ciclo simples, feito para evoluir com você.<br>Comece pelo que já está estudando.</p></div>
+        <div class="steps-grid">
+          <article class="step reveal"><div class="step-top"><span class="step-icon"><svg class="icon"><use href="#i-file"/></svg></span><span>01</span></div><h3>Adicione seu material</h3><p>PDFs, anotações ou um objetivo de estudo. Seu conteúdo é o ponto de partida.</p><span class="step-chip">Seu conteúdo, seu treino</span></article>
+          <article class="step reveal"><div class="step-top"><span class="step-icon"><svg class="icon"><use href="#i-spark"/></svg></span><span>02</span></div><h3>Gere seu treinamento</h3><p>Sessões e simulados personalizados para o que você precisa aprender e praticar.</p><span class="step-chip">Personalizado para você</span></article>
+          <article class="step reveal"><div class="step-top"><span class="step-icon"><svg class="icon"><use href="#i-clock"/></svg></span><span>03</span></div><h3>Treine sob pressão</h3><p>Tempo e condições evoluem aos poucos, aproximando o treino de uma prova real.</p><span class="step-chip">Um nível de cada vez</span></article>
+          <article class="step reveal"><div class="step-top"><span class="step-icon"><svg class="icon"><use href="#i-chart"/></svg></span><span>04</span></div><h3>Entenda sua performance</h3><p>Descubra onde perdeu tempo, hesitou e o que pode ajustar na próxima sessão.</p><span class="step-chip">Dados que viram direção</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section analytics-section" id="tecnologia">
+      <div class="container">
+        <div class="section-heading centered reveal"><div class="eyebrow"><span class="section-number">03</span> MENOS ACHISMO. MAIS DIREÇÃO.</div><h2>Sua performance deixa padrões.<br><span class="text-teal">Nós mostramos quais.</span></h2><p>Não é só sobre a nota final. É sobre entender o caminho até ela.</p></div>
+        <div class="analytics-window reveal">
+          <aside class="dashboard-sidebar" aria-label="Visão ilustrativa do produto"><span class="dashboard-logo">e<span>↗</span></span><span class="sidebar-item"><svg class="icon"><use href="#i-grid"/></svg></span><span class="sidebar-item"><svg class="icon"><use href="#i-book"/></svg></span><span class="sidebar-item active"><svg class="icon"><use href="#i-chart"/></svg></span><span class="sidebar-item"><svg class="icon"><use href="#i-target"/></svg></span><span class="sidebar-bottom avatar">A</span></aside>
+          <div class="dashboard-main">
+            <div class="dashboard-top"><div><span class="overline">SEU CONHECIMENTO EM MOVIMENTO</span><h3>Visão de performance <span class="demo-pill">DEMO</span></h3></div><div class="period-control" role="group" aria-label="Período dos dados demonstrativos"><button class="active" data-period="week" aria-pressed="true">7 dias</button><button data-period="month" aria-pressed="false">30 dias</button></div></div>
+            <div class="dashboard-stats" aria-live="polite"><div class="stat"><span>Precisão <svg class="icon"><use href="#i-target"/></svg></span><strong id="stat-accuracy">82<small>%</small></strong><span class="stat-caption positive" id="stat-accuracy-change">↗ 8 p.p. na semana</span></div><div class="stat"><span>Tempo médio <svg class="icon"><use href="#i-clock"/></svg></span><strong id="stat-time">1<small>m</small> 42<small>s</small></strong><span class="stat-caption" id="stat-time-change">18s mais rápido</span></div><div class="stat"><span>Sob pressão <svg class="icon"><use href="#i-bolt"/></svg></span><strong id="stat-pressure">74<small>%</small></strong><span class="stat-caption positive" id="stat-pressure-change">↗ 6 p.p. na semana</span></div><div class="stat"><span>Hesitações <svg class="icon"><use href="#i-thought"/></svg></span><strong id="stat-hesitation">6</strong><span class="stat-caption" id="stat-hesitation-change">Em 20 questões</span></div></div>
+            <div class="dashboard-charts">
+              <div class="chart-panel pressure-chart"><div class="chart-heading"><h4>Desempenho × pressão</h4><span class="chart-legend"><i></i> Precisão</span></div><p>O que muda quando as condições mudam?</p><div class="bar-chart" aria-label="Baixa pressão: 91%. Pressão moderada: 87%. Alta pressão: 72%."><div class="bar-grid"><span>100%</span><span>50%</span><span>0%</span></div><div class="bar-columns"><div class="bar-column"><div class="bar mint-bar" style="--bar:91%"><strong>91%</strong></div><span>Baixa</span></div><div class="bar-column"><div class="bar teal-bar" style="--bar:87%"><strong>87%</strong></div><span>Moderada</span></div><div class="bar-column"><div class="bar coral-bar" style="--bar:72%"><strong>72%</strong></div><span>Alta</span></div></div></div><span class="chart-axis-title">NÍVEL DE PRESSÃO</span></div>
+              <div class="chart-panel evolution-chart"><div class="chart-heading"><h4>Evolução entre sessões</h4><span class="growth-pill" id="chart-growth">+12 p.p.</span></div><p>Consistência se constrói a cada treino.</p><div class="line-chart"><svg viewBox="0 0 440 200" role="img" aria-labelledby="evolution-title"><title id="evolution-title">Exemplo de evolução: de 70% a 82% em seis sessões.</title><defs><linearGradient id="chart-fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#59c7b1" stop-opacity=".22"/><stop offset="100%" stop-color="#59c7b1" stop-opacity="0"/></linearGradient></defs><g class="chart-grid-lines"><path d="M40 30h380M40 85h380M40 140h380"/></g><g class="chart-y-labels"><text x="0" y="34">90%</text><text x="0" y="89">75%</text><text x="0" y="144">60%</text></g><path class="chart-area" id="evolution-area" d="M48 104 120 93 194 104 266 64 340 53 414 60V151H48Z"/><path class="chart-line" id="evolution-line" d="M48 104 120 93 194 104 266 64 340 53 414 60"/><g class="chart-points" id="evolution-points"><circle cx="48" cy="104" r="4"/><circle cx="120" cy="93" r="4"/><circle cx="194" cy="104" r="4"/><circle cx="266" cy="64" r="4"/><circle cx="340" cy="53" r="4"/><circle cx="414" cy="60" r="5"/></g><g class="chart-x-labels"><text x="48" y="181">S01</text><text x="120" y="181">S02</text><text x="194" y="181">S03</text><text x="266" y="181">S04</text><text x="340" y="181">S05</text><text x="414" y="181">S06</text></g></svg></div><div class="chart-footnote"><span class="legend-dot"></span> Cada sessão é um novo ponto de partida.</div></div>
+            </div>
+            <div class="dashboard-insight"><span class="insight-icon"><svg class="icon"><use href="#i-spark"/></svg></span><div><strong>Um dado. Uma nova direção.</strong><p id="dashboard-insight-text">Neste exemplo, o desempenho se mantém nos primeiros 35 minutos, mas cai quando resta menos de 20% do tempo. O próximo treino pode focar na gestão do ritmo.</p></div><span class="insight-badge">INSIGHT ESTUDEAI</span></div>
+            <p class="dashboard-disclaimer">Dados ilustrativos para demonstrar a proposta. Não representam resultados de usuários.</p>
+          </div>
+        </div>
+        <div class="analytics-caption"><svg class="icon"><use href="#i-shield"/></svg> Você no centro. Dados para orientar, nunca para rotular.</div>
+      </div>
+    </section>
+
+    <section class="section features-section">
+      <div class="container"><div class="section-heading split-heading reveal"><div><div class="eyebrow"><span class="section-number">04</span> ALÉM DO CERTO OU ERRADO</div><h2>Cada resposta conta.<br><span class="text-teal">O caminho até ela também.</span></h2></div><p>Não analisamos apenas se você acertou.<br>Analisamos como chegou à resposta.</p></div>
+        <div class="features-grid">
+          <article class="feature reveal"><span class="feature-icon"><svg class="icon"><use href="#i-clock"/></svg></span><h3>Tempo de resposta</h3><p>Encontre as questões que consomem seu tempo e ajuste o ritmo antes da prova.</p></article>
+          <article class="feature reveal"><span class="feature-icon"><svg class="icon"><use href="#i-thought"/></svg></span><h3>Hesitação</h3><p>Observe pausas, questões puladas e trocas de resposta que merecem atenção.</p></article>
+          <article class="feature reveal"><span class="feature-icon coral"><svg class="icon"><use href="#i-bolt"/></svg></span><h3>Pressão</h3><p>Compare sua execução à medida que o tempo diminui e o desafio aumenta.</p></article>
+          <article class="feature reveal"><span class="feature-icon"><svg class="icon"><use href="#i-target"/></svg></span><h3>Consistência</h3><p>Entenda se você consegue acessar o que sabe quando as condições mudam.</p></article>
+          <article class="feature reveal"><span class="feature-icon"><svg class="icon"><use href="#i-chart"/></svg></span><h3>Evolução</h3><p>Compare sessões e acompanhe os pequenos avanços que constroem sua preparação.</p></article>
+          <article class="feature reveal"><span class="feature-icon coral"><svg class="icon"><use href="#i-sliders"/></svg></span><h3>Personalização</h3><p>Conteúdo, dificuldade e condições de treino acompanham seu desempenho.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pressure-section" id="niveis">
+      <div class="container pressure-layout"><div class="pressure-copy reveal"><div class="eyebrow"><span class="section-number">05</span> DESAFIO NA MEDIDA CERTA</div><h2>Pressão também<br>pode ser <span>treinada.</span></h2><p>Você não precisa começar pelo mais difícil. As condições evoluem gradualmente, de acordo com o seu desempenho.</p><div class="pressure-note"><svg class="icon"><use href="#i-sliders"/></svg><span>Explore os níveis e encontre<br>o sentido de cada etapa.</span></div></div>
+        <div class="pressure-control reveal"><div class="pressure-control-top"><span>SEU TREINO. SEU RITMO.</span><svg class="icon"><use href="#i-bolt"/></svg></div><div class="level-buttons" role="tablist" aria-label="Níveis de treinamento"><button id="level-tab-1" role="tab" aria-selected="false" aria-controls="level-panel" tabindex="-1" data-level="0"><span>01</span>Controlado</button><button id="level-tab-2" class="active" role="tab" aria-selected="true" aria-controls="level-panel" tabindex="0" data-level="1"><span>02</span>Ritmo</button><button id="level-tab-3" role="tab" aria-selected="false" aria-controls="level-panel" tabindex="-1" data-level="2"><span>03</span>Pressão</button><button id="level-tab-4" role="tab" aria-selected="false" aria-controls="level-panel" tabindex="-1" data-level="3"><span>04</span>Simulação</button></div>
+          <div id="level-panel" role="tabpanel" aria-labelledby="level-tab-2" tabindex="0" aria-live="polite"><div class="level-title-row"><div><span class="level-kicker" id="level-kicker">NÍVEL 02 · ENCONTRE SUA CADÊNCIA</span><h3 id="level-title">Entre no ritmo.</h3></div><div class="level-meter" aria-hidden="true"><i class="filled"></i><i class="filled"></i><i></i><i></i></div></div><p id="level-description">Limites de tempo entram em cena, com espaço para você se adaptar e descobrir seu ritmo de resolução.</p><div class="level-detail-row"><span><svg class="icon"><use href="#i-clock"/></svg><span id="level-time">Tempo sugerido por questão</span></span><span><svg class="icon"><use href="#i-target"/></svg><span id="level-focus">Foco em gestão de tempo</span></span></div><div class="level-bottom"><span class="status-dot"></span> Progressão gradual. Evolução consciente.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section science-section" id="ciencia"><div class="container"><div class="section-heading centered reveal"><div class="eyebrow"><span class="section-number">06</span> UMA PROPOSTA COM FUNDAMENTO</div><h2>Tecnologia com propósito.<br><span class="text-teal">Aprendizagem com base científica.</span></h2><p>Princípios que inspiram como pensamos o treinamento.</p></div>
+      <div class="science-grid"><article class="science-card reveal"><span class="science-index">01 / APRENDIZAGEM</span><svg class="icon science-icon"><use href="#i-loop"/></svg><h3>Recuperação ativa</h3><p>Praticar a recuperação de informações por meio de testes pode favorecer a retenção de longo prazo em comparação com apenas reler o conteúdo.</p><a href="https://doi.org/10.1111/j.1467-9280.2006.01693.x" target="_blank" rel="noopener noreferrer">Roediger &amp; Karpicke, 2006 <svg class="icon"><use href="#i-up-right"/></svg></a></article>
+      <article class="science-card reveal"><span class="science-index">02 / EXECUÇÃO</span><svg class="icon science-icon"><use href="#i-thought"/></svg><h3>Pressão e memória</h3><p>Situações de pressão podem interferir na atenção e na memória de trabalho utilizadas para resolver problemas, mesmo quando há domínio do conteúdo.</p><a href="https://www.simonandschuster.com/books/Choke/Sian-Beilock/9781439109625" target="_blank" rel="noopener noreferrer">Sian Beilock, 2010 <svg class="icon"><use href="#i-up-right"/></svg></a></article>
+      <article class="science-card reveal"><span class="science-index">03 / CONTEXTO</span><svg class="icon science-icon"><use href="#i-chart"/></svg><h3>Ativação e desempenho</h3><p>O trabalho clássico de Yerkes e Dodson investigou como intensidade do estímulo e dificuldade da tarefa se relacionam à aprendizagem, em animais.</p><a href="https://www.yorku.ca/pclassic/Yerkes/Law/" target="_blank" rel="noopener noreferrer">Yerkes &amp; Dodson, 1908 <svg class="icon"><use href="#i-up-right"/></svg></a></article></div>
+      <p class="science-note">Essas referências orientam a proposta educacional; não validam a eficácia da plataforma nem garantem resultados individuais. A EstudeAI não oferece tratamento médico ou psicológico.</p>
+    </div></section>
+
+    <section class="section audience-section" id="para-quem"><div class="container"><div class="section-heading split-heading reveal"><div><div class="eyebrow"><span class="section-number">07</span> GRANDES OBJETIVOS. MELHOR PREPARAÇÃO.</div><h2>Para momentos em que<br><span class="text-teal">cada questão importa.</span></h2></div><p>Objetivos diferentes.<br>A mesma vontade de dar o seu melhor.</p></div><div class="audience-grid reveal"><div><svg class="icon"><use href="#i-cap"/></svg><span>ENEM e vestibulares</span></div><div><svg class="icon"><use href="#i-shield"/></svg><span>Medicina</span></div><div><svg class="icon"><use href="#i-target"/></svg><span>ITA e IME</span></div><div><svg class="icon"><use href="#i-briefcase"/></svg><span>Concursos públicos</span></div><div><svg class="icon"><use href="#i-book"/></svg><span>OAB</span></div><div><svg class="icon"><use href="#i-code"/></svg><span>Certificações de tecnologia</span></div><div><svg class="icon"><use href="#i-chart"/></svg><span>Certificações financeiras</span></div><div><svg class="icon"><use href="#i-grid"/></svg><span>Escolas e cursinhos</span></div></div><p class="audience-caption">Quanto maior a pressão pelo resultado, mais importa treinar a execução.</p></div></section>
+
+    <section class="section complement-section" id="sobre"><div class="container complement-layout"><div class="reveal"><div class="eyebrow"><span class="section-number">08</span> MAIS UMA CAMADA NA SUA PREPARAÇÃO</div><h2>Estudar é essencial.<br><span class="text-teal">Treinar faz parte.</span></h2><p>Seu curso, seus professores e seus materiais continuam com você. A EstudeAI acrescenta um espaço para colocar tudo isso em prática.</p><span class="complement-equation">Conhecimento <b>+</b> execução <b>=</b> preparação</span></div><div class="comparison-table-wrap reveal"><table class="comparison-table"><caption class="sr-only">Como a EstudeAI complementa a preparação tradicional</caption><thead><tr><th scope="col">Sua preparação</th><th scope="col">+ Estude<span>AI</span></th></tr></thead><tbody><tr><td>Conteúdo e teoria</td><td>Conhecimento aplicado</td></tr><tr><td>Videoaulas</td><td>Simulados personalizados</td></tr><tr><td>Exercícios</td><td>Tempo controlado</td></tr><tr><td>Revisão</td><td>Pressão progressiva</td></tr><tr><td>Análise de acertos</td><td>Análise de como você responde</td></tr><tr><td>Acompanhamento de estudos</td><td>Evolução de performance</td></tr></tbody></table></div></div></section>
+
+    <section class="section final-section" id="comecar"><div class="container"><div class="final-cta reveal"><div class="final-copy"><div class="eyebrow"><span class="status-dot"></span> O PRÓXIMO PASSO É SEU</div><h2>Você já treinou o que sabe.<br>Agora treine <span>como<br>você performa.</span></h2><p>Descubra como seu conhecimento se comporta<br>quando o relógio começa a correr.</p><div class="final-actions"><button class="button button-coral" data-open="demo-dialog">Quero testar a plataforma <svg class="icon"><use href="#i-arrow"/></svg></button><a href="#como-funciona">Conhecer a solução <svg class="icon"><use href="#i-up-right"/></svg></a></div></div>
+      <form id="waitlist-form" class="waitlist-form"><span class="form-label"><svg class="icon"><use href="#i-mail"/></svg> FIQUE POR PERTO</span><h3>Seu próximo capítulo<br>começa aqui.</h3><p>Deixe seu interesse preparado para a lista de espera.</p><label for="waitlist-name">Nome</label><input type="text" id="waitlist-name" name="name" placeholder="Como podemos chamar você?" autocomplete="given-name" maxlength="80" required><label for="waitlist-email">E-mail</label><input type="email" id="waitlist-email" name="email" placeholder="voce@exemplo.com" autocomplete="email" maxlength="254" required><label for="waitlist-goal">Seu objetivo</label><select id="waitlist-goal" name="goal" required><option value="" disabled selected>Selecione seu próximo desafio</option>ENEM</option><option>Vestibular</option><option>Concurso</option><option>Certificação</option><option>Outro</option></select><button class="button button-form" type="submit">Registrar interesse <svg class="icon"><use href="#i-arrow"/></svg></button><p class="form-note">Demonstração: os dados ficam apenas nesta sessão e não são enviados.</p><p class="form-feedback" id="waitlist-feedback" role="status" hidden></p></form>
+    </div></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand"><a class="brand" href="#inicio" aria-label="EstudeAI, início"><span class="brand-emblem"><img src="assets/logo-estudeai.png" alt="" width="2000" height="2000" loading="lazy"></span><span>Estude<span class="brand-ai">AI</span><span class="brand-dot">.</span></span></a><p>Não estude apenas para saber.<br>Treine para performar.</p></div><div class="footer-links"><div><h3>Explore</h3><a href="#como-funciona">Produto</a><a href="#ciencia">Ciência</a><a href="#sobre">Sobre</a></div><div><h3>Converse com a gente</h3><button data-info="contact">Contato <span>↗</span></button><button data-info="instagram">Instagram <span>↗</span></button><button data-info="linkedin">LinkedIn <span>↗</span></button></div></div><div class="footer-signoff"><span>FEITO PARA O SEU PRÓXIMO NÍVEL</span><svg class="icon"><use href="#i-up-right"/></svg></div></div><div class="footer-bottom"><p>© 2026 EstudeAI. Todos os direitos reservados.</p><div><button data-info="privacy">Privacidade</button><button data-info="terms">Termos de uso</button><span class="footer-status"><span class="status-dot"></span> Aprender é só o começo.</span></div></div></div></footer>
+
+  <dialog id="demo-dialog" class="modal demo-modal" aria-labelledby="demo-heading"><button class="modal-close" data-close aria-label="Fechar demonstração"><svg class="icon"><use href="#i-close"/></svg></button><div class="eyebrow"><span class="status-dot"></span> EXPERIMENTE NA PRÁTICA</div><h2 id="demo-heading">Um pequeno treino.<br>Uma nova perspectiva.</h2><p class="demo-intro">3 questões de conhecimentos gerais para experimentar o ritmo. Esta amostra não avalia sua preparação para um exame.</p><div class="demo-setup" id="demo-setup"><label for="demo-level">Como você quer treinar?</label><select id="demo-level"><option value="0">Controlado — sem limite de tempo</option><option value="1" selected>Ritmo — 90 segundos</option><option value="2">Pressão — 60 segundos</option><option value="3">Simulação — 45 segundos</option></select><button id="start-demo" class="button">Iniciar demonstração <svg class="icon"><use href="#i-play"/></svg></button></div><div id="demo-active" hidden><div class="demo-progress-row"><span id="demo-progress">Questão 1 de 3</span><span class="timer" id="demo-timer" role="timer">01:30</span></div><progress id="demo-progress-bar" value="0" max="3" aria-label="Questões respondidas"></progress><fieldset id="demo-question"><legend id="demo-question-text"></legend><div id="demo-options"></div></fieldset><p id="demo-question-feedback" role="status"></p><div class="demo-navigation"><button id="demo-skip" class="button button-ghost">Pular questão</button><button id="demo-next" class="button">Confirmar <svg class="icon"><use href="#i-arrow"/></svg></button></div></div><div id="demo-result" hidden aria-live="polite"></div></dialog>
+  <dialog id="access-dialog" class="modal small-modal" aria-labelledby="access-heading"><button class="modal-close" data-close aria-label="Fechar"><svg class="icon"><use href="#i-close"/></svg></button><span class="icon-box"><svg class="icon"><use href="#i-book"/></svg></span><h2 id="access-heading">Seu próximo nível<br>está em construção.</h2><p>A área do aluno ainda não está disponível nesta versão. Você já pode experimentar um treino demonstrativo ou preparar seu interesse na lista de espera.</p><button class="button" data-open="demo-dialog">Experimentar agora <svg class="icon"><use href="#i-arrow"/></svg></button><a class="modal-text-link" href="#comecar" data-close>Conhecer a lista de espera</a></dialog>
+  <dialog id="info-dialog" class="modal small-modal" aria-labelledby="info-heading"><button class="modal-close" data-close aria-label="Fechar"><svg class="icon"><use href="#i-close"/></svg></button><span class="icon-box"><svg class="icon"><use href="#i-thought"/></svg></span><h2 id="info-heading"></h2><div id="info-content"></div></dialog>
+  <noscript><div class="noscript-notice">Ative o JavaScript para experimentar o treino e os controles interativos. Todo o conteúdo da página permanece disponível.</div></noscript>
+</body>
+</html>
